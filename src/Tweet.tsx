@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-interface TweetProps {
+export interface TweetProps {
+  key: number;
   content: string;
   icon: string;
   displayName: string;
@@ -27,12 +27,6 @@ const Tweet: React.FC<TweetProps> = (props): JSX.Element => {
       </div>
     </div>
   );
-};
-Tweet.propTypes = {
-  content: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  displayName: PropTypes.string.isRequired,
-  accountName: PropTypes.string.isRequired
 };
 
 export default Tweet;
