@@ -1,10 +1,11 @@
 import React from 'react';
+import { TweetProps } from './Tweet';
 import Timeline from './Timeline';
 import TweetInput from './TweetInput';
 import './App.css';
 
 const App: React.FC = (): JSX.Element => {
-  const [tweets, setTweets] = React.useState([
+  const [initialTweets, setTweets] = React.useState<TweetProps[]>([
     {
       key: 0,
       icon: '🌽',
@@ -21,7 +22,7 @@ const App: React.FC = (): JSX.Element => {
     }
   ]);
 
-  const addTweet = React.useCallback(
+  const addTweet = React.useCallback<(tweet: TweetProps) => void>(
     tweet => setTweets(prev => [tweet, ...prev]),
     [setTweets]
   );
@@ -29,7 +30,7 @@ const App: React.FC = (): JSX.Element => {
   return (
     <div>
       <TweetInput addTweet={addTweet} />
-      <Timeline tweets={tweets} />
+      <Timeline tweets={initialTweets} />
     </div>
   );
 };

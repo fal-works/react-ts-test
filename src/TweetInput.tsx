@@ -1,7 +1,7 @@
 import React from 'react';
 import { TweetProps } from './Tweet';
 
-interface TweetInputProps {
+export interface TweetInputProps {
   addTweet: (tweet: TweetProps) => void;
 }
 

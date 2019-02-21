@@ -1,7 +1,7 @@
 import React from 'react';
 import Tweet, { TweetProps } from './Tweet';
 
-interface TimelineProps {
+export interface TimelineProps {
   tweets: TweetProps[];
 }
 
