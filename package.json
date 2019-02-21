@@ -29,6 +29,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.1.0",
+    "gh-pages": "^2.0.1",
     "prettier": "1.16.4"
   },
   "eslintConfig": {
@@ -39,6 +40,9 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
-    "test": "react-scripts test"
-  }
+    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "http://falworks.github.io/react-ts-test/"
 }
