@@ -54,7 +54,7 @@ module.exports = {
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/no-unnecessary-type-assertion": "error",
         "indent": "off",
-        "@typescript-eslint/indent": ["error", 2],
+        "@typescript-eslint/indent": "off",
         "camelcase": "off",
         "@typescript-eslint/camelcase": "error",
         "no-array-constructor": "off",
