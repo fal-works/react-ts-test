@@ -1,33 +1,37 @@
 import React from 'react';
-import { TweetProps } from './Tweet';
 import Timeline from './Timeline';
+import TweetInput from './TweetInput';
 import './App.css';
 
-class App extends React.Component {
-  public render(): JSX.Element {
-    const tweets: TweetProps[] = [
-      {
-        key: 0,
-        icon: '🌽',
-        displayName: 'もろこし太郎',
-        accountName: 'morokoshi',
-        content: '今日も1日もろこしがうまい'
-      },
-      {
-        key: 1,
-        icon: '🦐',
-        displayName: 'エビデンス',
-        accountName: 'evidence',
-        content: 'かにみそたべたい'
-      }
-    ];
+const App: React.FC = (): JSX.Element => {
+  const [tweets, setTweets] = React.useState([
+    {
+      key: 0,
+      icon: '🌽',
+      displayName: 'もろこし太郎',
+      accountName: 'morokoshi',
+      content: '今日も1日もろこしがうまい'
+    },
+    {
+      key: 1,
+      icon: '🦐',
+      displayName: 'エビデンス',
+      accountName: 'evidence',
+      content: 'かにみそたべたい'
+    }
+  ]);
 
-    return (
-      <div>
-        <Timeline tweets={tweets} />
-      </div>
-    );
-  }
-}
+  const addTweet = React.useCallback(
+    tweet => setTweets(prev => [tweet, ...prev]),
+    [setTweets]
+  );
+
+  return (
+    <div>
+      <TweetInput addTweet={addTweet} />
+      <Timeline tweets={tweets} />
+    </div>
+  );
+};
 
 export default App;
