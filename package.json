@@ -12,8 +12,8 @@
     "@types/node": "11.9.4",
     "@types/react": "^16.8.4",
     "@types/react-dom": "16.8.2",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "react-scripts": "2.1.5",
     "typescript": "3.3.3"
   },
@@ -28,6 +28,7 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.1.0",
     "prettier": "1.16.4"
   },
   "eslintConfig": {
